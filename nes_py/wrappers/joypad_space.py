@@ -1,7 +1,7 @@
 """An environment wrapper to convert binary to discrete action space."""
-import gym
-from gym import Env
-from gym import Wrapper
+import gymnasium
+from gymnasium import Env
+from gymnasium import Wrapper
 
 
 class JoypadSpace(Wrapper):
@@ -40,7 +40,7 @@ class JoypadSpace(Wrapper):
         """
         super().__init__(env)
         # create the new action space
-        self.action_space = gym.spaces.Discrete(len(actions))
+        self.action_space = gymnasium.spaces.Discrete(len(actions))
         # create the action map from the list of discrete actions
         self._action_map = {}
         self._action_meanings = {}

@@ -4,9 +4,9 @@ import glob
 import itertools
 import os
 import sys
-import gym
-from gym.spaces import Box
-from gym.spaces import Discrete
+import gymnasium
+from gymnasium.spaces import Box
+from gymnasium.spaces import Discrete
 import numpy as np
 from ._rom import ROM
 from ._image_viewer import ImageViewer
@@ -80,7 +80,7 @@ RAM_VECTOR = ctypes.c_byte * 0x800
 CONTROLLER_VECTOR = ctypes.c_byte * 1
 
 
-class NESEnv(gym.Env):
+class NESEnv(gymnasium.Env):
     """An NES environment based on the LaiNES emulator."""
 
     # relevant meta-data about the environment

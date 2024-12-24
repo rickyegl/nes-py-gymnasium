@@ -1,6 +1,6 @@
 """Test cases for the NESEnv class."""
 from unittest import TestCase
-import gym
+import gymnasium
 import numpy as np
 from .rom_file_abs_path import rom_file_abs_path
 from nes_py.nes_env import NESEnv
@@ -41,7 +41,7 @@ class ShouldRaiseErrorOnStepBeforeReset(TestCase):
 class ShouldCreateInstanceOfNESEnv(TestCase):
     def test(self):
         env = NESEnv(rom_file_abs_path('super-mario-bros-1.nes'))
-        self.assertIsInstance(env, gym.Env)
+        self.assertIsInstance(env, gymnasium.Env)
         env.close()
 
 

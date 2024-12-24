@@ -7,7 +7,7 @@ def play_random(env, steps):
     Play the environment making uniformly random decisions.
 
     Args:
-        env (gym.Env): the initialized gym environment to play
+        env (gymnasium.Env): the initialized gym environment to play
         steps (int): the number of random steps to take
 
     Returns:
