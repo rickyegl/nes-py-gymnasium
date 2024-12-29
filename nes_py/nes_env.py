@@ -352,7 +352,7 @@ class NESEnv(gymnasium.Env):
         if self.viewer is not None:
             self.viewer.close()
 
-    def render(self, mode='human'):
+    def render(self, mode='rgb_array'):
         """
         Render the environment.
 
