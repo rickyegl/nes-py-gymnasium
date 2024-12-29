@@ -17,7 +17,7 @@ def _get_args():
     # add the argument for the mode of execution as either human or random
     parser.add_argument('--mode', '-m',
         type=str,
-        default='human',
+        default='random',
         choices=['human', 'random'],
         help='The execution mode for the emulation.',
     )
