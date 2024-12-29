@@ -312,7 +312,7 @@ class NESEnv(gymnasium.Env):
         elif reward > self.reward_range[1]:
             reward = self.reward_range[1]
         # return the screen from the emulator and other relevant data
-        return self.screen, reward, self.done, info
+        return self.screen, reward, self.done, False, info
 
     def _get_reward(self):
         """Return the reward after a step occurs."""
