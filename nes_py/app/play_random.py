@@ -15,7 +15,7 @@ def play_random(env, steps):
 
     """
     try:
-        terminated, truncated = True
+        terminated = truncated = True
         progress = tqdm(range(steps))
         for _ in progress:
             if terminated or truncated:
