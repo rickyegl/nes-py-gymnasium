@@ -19,8 +19,8 @@ def play_random(env, steps):
         progress = tqdm(range(steps))
         for _ in progress:
             if terminated or truncated:
-                #seed, options, return_info
-                _, _, info = env.reset()
+                #obs, none
+                _, info = env.reset()
             action = env.action_space.sample()
             _, reward, terminated, truncated, info = env.step(action)
             progress.set_postfix(reward=reward, info=info)
